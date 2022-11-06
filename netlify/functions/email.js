@@ -63,7 +63,7 @@ module.exports.handler = async function (event, context) {
     }
     if (event.httpMethod === 'POST') {
       // Get the body
-      const { email, site = null } = JSON.parse(event.body);
+      const { email, site = '' } = JSON.parse(event.body);
 
       if (!validateEmail(email)) {
         return { statusCode: 400, body: 'Email is not valid' };
