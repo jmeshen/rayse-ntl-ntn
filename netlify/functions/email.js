@@ -24,8 +24,9 @@ async function addEmail(email, site) {
         ],
       },
       Site: {
-        title: [
+        rich_text: [
           {
+            type: 'text',
             text: {
               content: site,
             },
